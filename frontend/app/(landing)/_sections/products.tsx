@@ -2,9 +2,9 @@
 
 import React from "react";
 import { LuShoppingBasket } from 'react-icons/lu'
-import { Badge } from "./Badges"
+import { Badge } from "@/components/ui/badge"
 
-export default function Products() {
+export default function ProductsSection() {
 
     const badgeStyles = [
         { name: 'Best Seller', color: 'bg-yellow-400 text-black' },

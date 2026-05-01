@@ -10,7 +10,7 @@ import {
     Bars3Icon,
     XMarkIcon,
 } from '@heroicons/react/24/outline'
-import logo from '../../public/logo.webp'
+import logo from '@/public/logo.webp'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { LuShoppingBasket } from 'react-icons/lu'

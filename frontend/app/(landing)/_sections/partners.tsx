@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Partners() {
+export default function PartnersSection() {
     return (
         <div className="py-20 md:my-20">
             <div className="pb-20">

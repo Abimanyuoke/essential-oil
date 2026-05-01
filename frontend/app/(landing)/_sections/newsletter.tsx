@@ -3,7 +3,7 @@ import { ArrowRight } from 'lucide-react'
 import { motion } from "framer-motion";
 import React from 'react'
 
-export default function AboutLetter() {
+export default function NewsletterSection() {
     return (
         <div className='w-4/5 mx-auto py-10'>
             <div className="grid lg:grid-cols-8 gap-10 md:gap-20 bg-black text-white p-14 rounded-xl items-center shadow-xl cursor-pointer">

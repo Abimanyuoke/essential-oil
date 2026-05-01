@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
-export default function AboutUs() {
+export default function AboutUsSection() {
     return (
         <div className="grid grid-cols-2 gap-10 items-center">
             <div className="relative w-full flex justify-center items-center">

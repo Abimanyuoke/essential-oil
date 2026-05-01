@@ -92,11 +92,11 @@ export default function Footer() {
                             </Link>
                             <Link href={"#"} className="text-gray-300 hover:text-primary transition-colors duration-300 flex items-center gap-2 group" >
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-right w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-                                Wellness Kits
+                                Bulk Orders
                             </Link>
                             <Link href={"#"} className="text-gray-300 hover:text-primary transition-colors duration-300 flex items-center gap-2 group" >
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-right w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-                                Bulk Orders
+                                Wellness Kits
                             </Link>
                         </div>
                     </div>

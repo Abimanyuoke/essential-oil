@@ -5,8 +5,9 @@ import {
     CarouselItem,
     CarouselNext,
     CarouselPrevious,
-} from "@/src/components/ui/carousel"
+} from "@/components/ui/carousel"
 import { Star, Quote } from "lucide-react";
+
 const testimonialData = [
     {
         id: 1,
@@ -14,7 +15,7 @@ const testimonialData = [
         position: "Wellness Coach, Tranquil Minds",
         image: "https://images.unsplash.com/photo-1584992115057-a4f38fc57b36",
         rating: 5,
-        testimonial: "I’ve tried countless brands, but these oils genuinely uplift the energy in my sessions. Clients can feel the difference.",
+        testimonial: "I've tried countless brands, but these oils genuinely uplift the energy in my sessions. Clients can feel the difference.",
         company: "Tranquil Minds",
     },
     {
@@ -32,7 +33,7 @@ const testimonialData = [
         position: "Owner, Soul Garden Spa",
         image: "https://images.unsplash.com/photo-1620812094173-24dbd7157421",
         rating: 5,
-        testimonial: "Customers ask where we get our oils all the time. They’ve become part of our signature experience.",
+        testimonial: "Customers ask where we get our oils all the time. They've become part of our signature experience.",
         company: "Soul Garden Spa",
     },
     {
@@ -64,7 +65,7 @@ const testimonialData = [
     },
 ]
 
-export default function Testimonial() {
+export default function TestimonialsSection() {
     const renderStarts = (rating: number) => {
         return Array.from({ length: 5 }, (_, index) => (
             <Star
@@ -138,5 +139,3 @@ export default function Testimonial() {
         </div>
     )
 }
-
-
