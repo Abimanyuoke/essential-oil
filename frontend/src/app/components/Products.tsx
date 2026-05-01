@@ -2,7 +2,7 @@
 
 import React from "react";
 import { LuShoppingBasket } from 'react-icons/lu'
-import { Badge } from "../components/Badges"
+import { Badge } from "./Badges"
 
 export default function Products() {
 

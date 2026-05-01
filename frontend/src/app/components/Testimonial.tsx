@@ -5,7 +5,7 @@ import {
     CarouselItem,
     CarouselNext,
     CarouselPrevious,
-} from "@/components/ui/carousel"
+} from "@/src/components/ui/carousel"
 import { Star, Quote } from "lucide-react";
 const testimonialData = [
     {
@@ -99,7 +99,7 @@ export default function Testimonial() {
                                         </div>
                                         <blockquote className="mb-8 flex-grow">
                                             <p className="text-gray-700 leading-relaxed text-lg italic">
-                                                "{testimonial.testimonial}"
+                                                {testimonial.testimonial}
                                             </p>
                                         </blockquote>
 
