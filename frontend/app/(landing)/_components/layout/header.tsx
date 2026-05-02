@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import {
-    Dialog,
+    // Dialog,
     DialogPanel,
     PopoverGroup,
 } from '@headlessui/react'
@@ -10,15 +10,21 @@ import {
     Bars3Icon,
     XMarkIcon,
 } from '@heroicons/react/24/outline'
+import { Dialog, DialogTrigger } from "@/components/ui/dialog";
 import logo from '@/public/logo1.png'
 import Link from 'next/link'
-import { useRouter } from 'next/navigation'
-import { LuShoppingBasket } from 'react-icons/lu'
+import { useRouter } from 'next/navigation';
+import { LuShoppingBasket } from 'react-icons/lu';
+import { createClient } from "@/lib/supabase/client";
+import { Button } from '@/components/ui/button';
+import DialogCreateUser from "@/app/(auth)/signUp/_components/dialog-create-user";
+import { toast } from 'sonner';
 
 
 export default function Header() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
     const [scrolled, setScrolled] = useState(false);
+    const supabase = createClient();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -38,8 +44,8 @@ export default function Header() {
 
     return (
         <header className={`fixed w-full z-50 transition-all duration-300 ${scrolled
-                ? "bg-white/80 backdrop-blur-md shadow-md text-black"
-                : "bg-transparent text-white"
+            ? "bg-white/80 backdrop-blur-md shadow-md text-black"
+            : "bg-transparent text-white"
             }`}>
             <nav aria-label="Global" className="mx-auto flex container items-center justify-between p-6 lg:px-8">
                 <div className="flex lg:flex-1">
@@ -81,15 +87,23 @@ export default function Header() {
                     </button>
                 </div>
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end items-center">
-                    <button className="text-base font-medium cursor-pointer text-white px-6 py-2.5 bg-black rounded-sm hover:scale-105 hover:bg-primary transition-all duration-300 shadow-lg" onClick={() => router.push('/auth/signIn')}>
+                    {/* <button className="text-base font-medium cursor-pointer text-white px-6 py-2.5 bg-black rounded-sm hover:scale-105 hover:bg-primary transition-all duration-300 shadow-lg">
                         Sign In
-                    </button>
+                    </button> */}
+                    <Dialog>
+                        <DialogTrigger asChild>
+                            <Button variant="outline">Create</Button>
+                        </DialogTrigger>
+                        <DialogCreateUser refetch={function (): void {
+                            throw new Error('Function not implemented.');
+                        } } />
+                    </Dialog>
                     <div className='w-[38px] h-[38px] p-2 flex items-center justify-center rounded-full text-white bg-black hover:scale-105 hover:bg-primary transition-all duration-300 ml-4 text-2xl'>
                         <LuShoppingBasket />
                     </div>
                 </div>
             </nav>
-            <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
+            {/* <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
                 <div className="fixed inset-0 z-50" />
                 <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                     <div className="flex items-center justify-between">
@@ -142,7 +156,7 @@ export default function Header() {
                         </div>
                     </div>
                 </DialogPanel>
-            </Dialog>
+            </Dialog> */}
         </header>
     )
 }
