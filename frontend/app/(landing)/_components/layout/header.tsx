@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import {
     Dialog,
     DialogPanel,
@@ -10,7 +10,7 @@ import {
     Bars3Icon,
     XMarkIcon,
 } from '@heroicons/react/24/outline'
-import logo from '@/public/logo.webp'
+import logo from '@/public/logo1.png'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { LuShoppingBasket } from 'react-icons/lu'
@@ -18,10 +18,29 @@ import { LuShoppingBasket } from 'react-icons/lu'
 
 export default function Header() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+    const [scrolled, setScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 10) {
+                setScrolled(true);
+            } else {
+                setScrolled(false);
+            }
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     const router = useRouter();
 
     return (
-        <header className="bg-white">
+        <header className={`fixed w-full z-50 transition-all duration-300 ${scrolled
+                ? "bg-white/80 backdrop-blur-md shadow-md text-black"
+                : "bg-transparent text-white"
+            }`}>
             <nav aria-label="Global" className="mx-auto flex container items-center justify-between p-6 lg:px-8">
                 <div className="flex lg:flex-1">
                     <Link href="#" className="-m-1.5 p-1.5">

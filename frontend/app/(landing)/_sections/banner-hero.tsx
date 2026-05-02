@@ -5,7 +5,7 @@ import imgMain from '@/public/banner2.webp';
 
 export default function BannerHero() {
     return (
-        <div className="bg-gradient-to-t from-primary/40 to-white">
+        <div className="bg-gradient-to-t from-primary/40 to-white py-20">
             <div className="container px-5 md:py-10 mx-auto">
                 <div className="grid lg:grid-cols-2 gap-10 items-center py-20">
                     <div className="space-y-10">
