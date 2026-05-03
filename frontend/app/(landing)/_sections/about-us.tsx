@@ -7,7 +7,7 @@ export default function AboutUsSection() {
         <div className="grid grid-cols-2 gap-10 items-center">
             <div className="relative w-full flex justify-center items-center">
                 <Image
-                    src="/images/aboutus.jpg"
+                    src="/banner2.webp"
                     alt="About Us"
                     width={600}
                     height={600}

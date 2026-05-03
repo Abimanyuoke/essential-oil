@@ -6,7 +6,6 @@ import { AuthFormState } from "@/types/auth";
 import { loginSchemaForm } from "@/validations/auth-validation";
 import { revalidatePath } from "next/cache";
 import { cookies } from "next/headers";
-import { redirect } from "next/navigation";
 
 export async function login(prevState: AuthFormState, formData: FormData | null) {
 
@@ -51,5 +50,12 @@ export async function login(prevState: AuthFormState, formData: FormData | null)
     }
 
     revalidatePath('/', 'layout');
-    redirect('/');
+
+    return {
+        status: "success",
+        errors: {
+            ...prevState.errors,
+            _form: [],
+        },
+    };
 }

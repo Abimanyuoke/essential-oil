@@ -21,7 +21,9 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${poppins.className} antialiased`}>
-        {children}
+        <div className="overflow-x-hidden">
+          {children}
+        </div>
       </body>
     </html>
   );

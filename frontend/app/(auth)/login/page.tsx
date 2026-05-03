@@ -1,6 +1,6 @@
 import Login from './_components/login';
 export const metadata = {
-    title: 'Abicode Cafe | Login',
+    title: 'Essential Oil | Login',
 };
 
 export default function LoginPage() {
